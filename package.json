@@ -2,7 +2,7 @@
   "name": "sdk-bico",
   "version": "1.0.0",
   "license": "MIT",
-  "main": "src/index.ts",
+  "main": "index.ts",
   "scripts": {
     "test": "yarn jest:clear:cache && jest --watch",
     "test:ci": "yarn jest:clear:cache && jest",
