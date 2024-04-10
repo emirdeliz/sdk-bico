@@ -1,0 +1,84 @@
+{
+  "extends": "expo/tsconfig.base",
+  "compilerOptions": {
+    "jsx": "react-jsx",
+    "strict": true,
+    "moduleResolution": "node",
+    "resolveJsonModule": true,
+    "target": "es5",
+    "baseUrl": "./",
+    "paths": {
+      "@atoms": [
+        "src/ui/atoms"
+      ],
+      "@molecules": [
+        "src/ui/molecules"
+      ],
+      "@organisms": [
+        "src/ui/organisms"
+      ],
+      "@components": [
+        "src/ui/components"
+      ],
+      "@templates": [
+        "src/ui/templates"
+      ],
+      "@theme": [
+        "src/ui/system/theme"
+      ],
+      "@i18n": [
+        "src/ui/system/i18n"
+      ],
+      "@navigation": [
+        "src/ui/navigation"
+      ],
+      "@pages": [
+        "src/ui/pages"
+      ],
+      "@auth": [
+        "src/auth"
+      ],
+      "@hooks": [
+        "src/hooks"
+      ],
+      "@helpers": [
+        "src/helpers"
+      ],
+      "@socket": [
+        "src/socket"
+      ],
+      "@types": [
+        "src/types"
+      ],
+      "@utils": [
+        "src/utils"
+      ],
+      "@api": [
+        "src/api"
+      ],
+      "@services": [
+        "src/services"
+      ],
+      "@storage": [
+        "src/storage"
+      ],
+      "@constants": [
+        "src/constants"
+      ],
+      "@notifications": [
+        "src/notifications"
+      ],
+      "@test": [
+        "test"
+      ]
+    }
+  },
+  "include": [
+    "**/*.ts",
+    "**/*.tsx",
+    "src/types/index.d.ts"
+  ],
+  "exclude": [
+    "node_modules"
+  ]
+}
