@@ -1,5 +1,5 @@
-interface UserModel {
-  id: string;
+export interface UserModel {
+  id?: string;
   email: string;
   name: string;
   password: string;
@@ -8,8 +8,4 @@ interface UserModel {
   photo?: string;
   agreeToTerms: boolean;
   options?: { darkMode: boolean };
-}
-
-export {
-  UserModel
 }

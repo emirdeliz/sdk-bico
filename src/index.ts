@@ -1,5 +1,2 @@
-import { 
-  validateUser
-} from './validations';
-
-export { validateUser };
+export * from './validations';
+export * from './models';

@@ -14,7 +14,6 @@
     "ncu:doctor": "ncu --doctor --color",
     "ncu:u": "ncu --upgrade --color",
     "lint-staged": "lint-staged",
-    "build": "esbuild src/index.ts --bundle --platform=node --outfile=dist/index.js"
   },
   "lint-staged": {
     "**/*.{js,jsx,ts,tsx,html,css,json}": [
@@ -25,16 +24,15 @@
     "@types/jest": "^29.5.12",
     "@typescript-eslint/eslint-plugin": "^7.6.0",
     "@typescript-eslint/parser": "^7.6.0",
-    "esbuild": "^0.20.2",
     "eslint": "^8.57.0",
     "jest": "^29.7.0",
+    "ncu": "^0.2.1",
     "lint-staged": "^15.2.2",
     "prettier": "^3.2.5",
     "ts-jest": "^29.1.2",
     "typescript": "^5.4.4"
   },
   "dependencies": {
-    "joi": "^17.12.3",
-    "ncu": "^0.2.1"
+    "joi": "^17.12.3"
   }
 }

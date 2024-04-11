@@ -8,6 +8,7 @@
     "moduleResolution": "node",
     "target": "ES2015",
     "baseUrl": "./",
+    "composite": true,
     "esModuleInterop": true,
     "outFile": "dist/index.d.ts",
     "declaration": true,
@@ -21,11 +22,11 @@
       ],
       "@helpers": [
         "src/helpers"
-      ],
+      ]
     }
   },
   "include": [
-    "src/index.ts",
+    "src/**/*.ts",
   ],
   "exclude": [
     "node_modules"

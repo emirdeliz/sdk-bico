@@ -12,6 +12,9 @@
 /.next/
 /out/
 
+# production
+/dist
+
 # misc
 .DS_Store
 *.pem
@@ -45,6 +48,7 @@ node_modules/
 
 # Expo
 .expo/
+dist/
 web-build/
 
 # Native
