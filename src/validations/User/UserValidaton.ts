@@ -1,7 +1,7 @@
 import { UserModel } from '@models';
 import * as Joi from 'joi';
 
-export const validateUser = (user: UserModel) => {
+const validateUser = (user: UserModel) => {
   const result = Joi.object<UserModel>({
     name: Joi.string().required().message('Informe o nome'),
     password: Joi.string().required().min(8).message('Informe a senha'),
@@ -13,3 +13,4 @@ export const validateUser = (user: UserModel) => {
   return result;
 }
 
+export { validateUser }

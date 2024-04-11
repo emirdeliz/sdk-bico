@@ -1,1 +1,5 @@
-export * from './validations';
+import { 
+  validateUser
+} from './validations';
+
+export { validateUser };
