@@ -2,6 +2,7 @@ import { UserModel } from '@models';
 import * as Joi from 'joi';
 
 const validateUser = (user: UserModel) => {
+  console.log(user);
   const result = Joi.object<UserModel>({
     name: Joi.string().required().message('Informe o nome'),
     password: Joi.string().required().min(8).message('Informe a senha'),
