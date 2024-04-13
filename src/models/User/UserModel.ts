@@ -6,6 +6,6 @@ export interface UserModel {
   passwordRepeat: string;
   phone?: string;
   photo?: string;
-  agreeToTerms: boolean;
+  agreeTerms: boolean;
   options?: { darkMode: boolean };
 }

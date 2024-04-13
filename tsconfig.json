@@ -5,6 +5,7 @@
     "resolveJsonModule": true,
     "target": "es5",
     "declaration": true,
+    "lib": ["es2021"],
     "baseUrl": ".",
     "outDir": "dist",
     "paths": {
@@ -16,6 +17,12 @@
       ],
       "@helpers": [
         "src/helpers"
+      ],
+      "@constants": [
+        "src/constants"
+      ],
+      "@types": [
+        "src/types"
       ]
     }
   },
