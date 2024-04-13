@@ -1,6 +1,6 @@
 {
   "name": "sdk-bico",
-  "version": "1.0.5",
+  "version": "1.0.8",
   "license": "MIT",
   "main": "src/index.ts",
   "types": "src/index.ts",
@@ -36,6 +36,9 @@
     "typescript": "^5.4.4"
   },
   "dependencies": {
+    "@babel/preset-env": "^7.24.4",
+    "axios": "^1.6.8",
+    "babel-jest": "^29.7.0",
     "yup": "^1.4.0"
   }
 }
