@@ -11,9 +11,16 @@ const schema = yup.object<UserModel>().shape({
       /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])[0-9a-zA-Z]{8,}$/,
       'A senha deve conter letras, números, uma letra maiúscula e ter ao menos 8 caracteres.'
     ),
-  confirmPassword: yup.string().oneOf([yup.ref('password')], 'As senhas não são iguais.').required('Entre com a senha novamente.'),
+  confirmPassword: yup
+    .string()
+    .oneOf([yup.ref('password')], 'As senhas não são iguais.')
+    .required('Entre com a senha novamente.'),
   phone: yup.string().required('Informe o telefone.'),
   agreeTerms: yup.boolean().oneOf([true], 'Aceite os termos de uso.').required('Aceite os termos de uso.'),
+  address: yup.object().shape({
+    state: yup.string().required('Estado é obrigatório.'),
+    city: yup.string().required('Cidade é obrigatório.'),
+  }),
 });
 
 const validateUser = (user: UserModel) => {
