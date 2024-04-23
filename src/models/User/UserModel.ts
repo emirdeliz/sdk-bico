@@ -3,9 +3,10 @@ export interface UserModel {
   email: string;
   name: string;
   password: string;
-  passwordRepeat: string;
+  state: string;
+  city: string;
   phone?: string;
   photo?: string;
   agreeTerms: boolean;
-  options?: { darkMode: boolean };
+  darkMode: boolean;
 }
