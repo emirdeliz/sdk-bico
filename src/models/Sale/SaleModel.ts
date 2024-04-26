@@ -2,9 +2,8 @@ import { CategoryModel } from "../Category/CategoryModel";
 import { ProviderModel } from "../Provider/ProviderModel";
 import { SpecialtyModel } from "../Specialty/SpecialtyModel";
 
-export interface ServiceModel { 
+export interface SaleModel { 
   id: string;
-  responsible: ProviderModel;
-  category: CategoryModel;
   specialty: SpecialtyModel;
+  percentage: number;
 }
