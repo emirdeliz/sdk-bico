@@ -1,6 +1,6 @@
 import { prepareImageToUpload } from '@helpers';
-import { Api } from '../../base/ApiBase';
 import { UserModel } from '@models';
+import { Api } from '../../base/ApiBase';
 
 const URL_USER_BASE = 'customer';
 
@@ -19,7 +19,7 @@ export const updateUserApi = async (user: UserModel) =>
 export const createUserApi = async (user: UserModel) =>
   (await Api<UserModel>().post({
     url: URL_USER_BASE,
-    body: prepareImageToUpload(user, 'photo'),
+    body: user,
   })) as UserModel;
 
 export const deleteAccountApi = async () => {

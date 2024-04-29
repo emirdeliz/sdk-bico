@@ -2,13 +2,13 @@ import { UserModel } from '@models';
 import { buildMessageError } from '../Utils/ValidationUtils';
 import * as yup from 'yup';
 
-const schema = yup.object<UserModel>().shape({
+const schema = yup.object<UserRegisterModel>().shape({
   email: yup.string().required('E-mail é obrigatório.').email('Email inválido.'),
   password: yup
     .string()
     .required('Password é obrigatório.')
     .matches(
-      /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])[0-9a-zA-Z]{8,}$/,
+      /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*#?$&%ˆ()+-=])[A-Za-z\d@$!%*#?$&%ˆ()+-=]{8,}$/,
       'A senha deve conter letras, números, uma letra maiúscula e ter ao menos 8 caracteres.'
     ),
   confirmPassword: yup
@@ -17,10 +17,8 @@ const schema = yup.object<UserModel>().shape({
     .required('Entre com a senha novamente.'),
   phone: yup.string().required('Informe o telefone.'),
   agreeTerms: yup.boolean().oneOf([true], 'Aceite os termos de uso.').required('Aceite os termos de uso.'),
-  address: yup.object().shape({
-    state: yup.string().required('Estado é obrigatório.'),
-    city: yup.string().required('Cidade é obrigatório.'),
-  }),
+  state: yup.string().required('Estado é obrigatório.'),
+  city: yup.string().required('Cidade é obrigatório.'),
 });
 
 const validateUser = (user: UserModel) => {
